@@ -1,0 +1,83 @@
+.about-content {
+  background: linear-gradient(to bottom, #f4f6f9, #e1ecf4);
+}
+
+.profile-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.profile-img-wrapper {
+  flex: 1 1 120px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 5px solid #ffffff;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+}
+
+.profile-info {
+  flex: 2 1 250px;
+  padding-left: 20px;
+}
+
+.nama {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.sub-info {
+  font-size: 15px;
+  color: #5d6778;
+  margin: 3px 0;
+}
+
+.contact-buttons {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.slogan {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2e86de;
+  margin-top: 10px;
+}
+
+.description {
+  text-align: justify;
+  font-size: 15px;
+  color: #2f3640;
+  line-height: 1.6;
+}
+
+.highlight {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.footer-note {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #7f8c8d;
+}

@@ -1,0 +1,77 @@
+<ion-header translucent>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">
+      <ion-icon name="wallet-outline" slot="start"></ion-icon>
+      Kas Masuk
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding">
+  <ng-container *ngIf="kasData.length > 0; else kosong">
+    <ion-list lines="none">
+      <ion-item *ngFor="let kas of kasData" class="kas-item">
+        <ion-avatar slot="start" class="icon-box" [ngClass]="kas.jenisTransaksi === 'Pemasukan' ? 'green' : 'red'">
+          <ion-icon [name]="kas.jenisTransaksi === 'Pemasukan' ? 'trending-up' : 'trending-down'"></ion-icon>
+        </ion-avatar>
+
+        <ion-label>
+          <h2 class="ion-text-capitalize">{{ kas.kategori }}</h2>
+          <p>{{ kas.tanggal }} - {{ kas.metode_pembayaran }}</p>
+          <small><strong>Status:</strong> {{ kas.status }}</small><br>
+          <small><strong>Catatan:</strong> {{ kas.catatan_tambahan || '-' }}</small>
+        </ion-label>
+
+        <ion-note slot="end" color="success" class="jumlah">
+          Rp{{ kas.jumlah | number:'1.0-0' }}
+        </ion-note>
+      </ion-item>
+    </ion-list>
+  </ng-container>
+
+  <ng-template #kosong>
+    <div class="ion-text-center ion-margin-top">
+      <ion-icon name="document-text-outline" size="large" color="medium"></ion-icon>
+      <p>Tidak ada data kas masuk.</p>
+    </div>
+  </ng-template>
+</ion-content>
+
+<style>
+  .kas-item {
+    border-radius: 12px;
+    background: #f9f9f9;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    padding: 12px;
+  }
+
+  .icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0f2f1;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .icon-box.green {
+    background-color: #4caf50;
+  }
+
+  .icon-box.red {
+    background-color: #f44336;
+  }
+
+  .jumlah {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  ion-note {
+    margin-right: 8px;
+  }
+</style>

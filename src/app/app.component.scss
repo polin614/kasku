@@ -1,0 +1,28 @@
+ion-tabs {
+    ion-tab-bar {
+      background-color: #ffffff; /* White background */
+      color: #000000; /* Black color for icons and labels */
+      padding: 10px 0; /* Padding around the tab bar */
+      border-top: 1px solid #ccc; /* Light border at the top */
+      
+      ion-tab-button {
+        --color-selected: #4CAF50; /* Green color for selected tab */
+        --color: #000000; /* Default color for icons and labels */
+        padding: 5px 10px; /* Padding inside each tab */
+        
+        ion-icon {
+          font-size: 20px; /* Size of the icon */
+        }
+        
+        ion-label {
+          font-size: 12px; /* Label size */
+          margin-top: 5px; /* Space between icon and label */
+        }
+        
+        &.tab-selected {
+          color: #4CAF50; /* Color of icon and label when selected */
+        }
+      }
+    }
+  }
+  

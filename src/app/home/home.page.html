@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      <img src="assets/img/uang.png" style="height: 24px; margin-right: 8px; vertical-align: middle;" />
+      Kasku
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Tentang Kas -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>📋 Tentang Kas</ion-card-subtitle>
+      <ion-card-title>Mengelola Keuangan Pribadi dengan Bijak</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Kas adalah catatan keuangan harian yang membantu Anda mengetahui:
+      <ul>
+        <li>Ke mana uang Anda pergi</li>
+        <li>Berapa banyak pemasukan yang diterima</li>
+        <li>Cara menyeimbangkan pengeluaran & tabungan</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Motivasi Hari Ini -->
+  <ion-card color="warning">
+    <ion-card-header>
+      <ion-card-subtitle>💡 Motivasi Hari Ini</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <blockquote style="font-style: italic; color: #333;">
+        "Uang bukan segalanya, tapi pengelolaan uang yang baik bisa mengubah segalanya."
+      </blockquote>
+      <strong style="color: #000;">Catat sekarang, nikmati kemudian!</strong>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Tombol Aksi -->
+  <div class="ion-padding ion-text-center">
+    <ion-button expand="block" color="success" routerLink="/daftar">
+      <ion-icon slot="start" name="add-circle-outline"></ion-icon>
+      Tambah Kasku
+    </ion-button>
+
+    <ion-button expand="block" color="medium" routerLink="/data">
+      <ion-icon slot="start" name="bar-chart-outline"></ion-icon>
+      Lihat Histori Kas
+    </ion-button>
+  </div>
+</ion-content>

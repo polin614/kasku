@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">
+      <ion-icon name="cash-outline"></ion-icon>
+      Tambah Transaksi Kas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-card class="card-custom">
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">🧾 Formulir Transaksi</ion-card-title>
+      <ion-card-subtitle class="ion-text-center">Lengkapi data berikut dengan benar</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form (ngSubmit)="inputTransaksi()">
+
+        <ion-item lines="full">
+          <ion-label position="stacked">📅 Tanggal Transaksi</ion-label>
+          <ion-datetime
+            placeholder="Pilih tanggal..."
+            [(ngModel)]="tanggal_transaksi"
+            name="tanggal_transaksi"
+            presentation="date"
+            color="primary"
+            show-default-buttons="true"
+            mode="ios"
+          ></ion-datetime>
+        </ion-item>
+
+        <ion-item lines="full">
+          <ion-label position="stacked">🔁 Jenis Transaksi</ion-label>
+          <ion-select [(ngModel)]="jenis_transaksi" name="jenis_transaksi" placeholder="Pilih jenis..." interface="popover" color="secondary" required>
+            <ion-select-option value="Pemasukan">📥 Pemasukan</ion-select-option>
+            <ion-select-option value="Pengeluaran">📤 Pengeluaran</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item lines="full">
+          <ion-label position="stacked">📂 Kategori</ion-label>
+          <ion-input [(ngModel)]="kategori" name="kategori" required></ion-input>
+        </ion-item>
+
+        <ion-item lines="full">
+          <ion-label position="stacked">💰 Jumlah (Rp)</ion-label>
+          <ion-input type="number" [(ngModel)]="jumlah" name="jumlah" required></ion-input>
+        </ion-item>
+
+        <ion-item lines="full">
+          <ion-label position="stacked">📝 Deskripsi</ion-label>
+          <ion-textarea auto-grow="true" [(ngModel)]="deskripsi" name="deskripsi"></ion-textarea>
+        </ion-item>
+
+        <ion-item lines="full">
+          <ion-label position="stacked">💳 Metode Pembayaran</ion-label>
+          <ion-input [(ngModel)]="metode_pembayaran" name="metode_pembayaran"></ion-input>
+        </ion-item>
+
+        <ion-item lines="full">
+          <ion-label position="stacked">📌 Catatan Tambahan</ion-label>
+          <ion-textarea auto-grow="true" [(ngModel)]="catatan_tambahan" name="catatan_tambahan"></ion-textarea>
+        </ion-item>
+
+        <ion-item lines="full">
+          <ion-label position="stacked">📍 Status</ion-label>
+          <ion-input [(ngModel)]="status" name="status"></ion-input>
+        </ion-item>
+
+        <div class="ion-margin-top ion-text-center">
+          <ion-button expand="block" type="submit" color="success">
+            <ion-icon name="save-outline" slot="start"></ion-icon>
+            Simpan Transaksi
+          </ion-button>
+        </div>
+
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

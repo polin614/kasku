@@ -1,0 +1,21 @@
+.card-custom {
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+ion-item {
+  --highlight-color-focused: var(--ion-color-primary);
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+ion-datetime {
+  --background: #f0f8ff;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+ion-button {
+  border-radius: 20px;
+  font-weight: 600;
+}
